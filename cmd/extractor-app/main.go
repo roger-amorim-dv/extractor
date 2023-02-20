@@ -16,6 +16,7 @@ func HandleRequest(ctx context.Context) {
       fmt.Println("HTTP json post:", url)
 
       dataMap := map[string]interface{}{
+            "application_owner": os.Getenv("APPLICATION_OWNER"),
       		"application_name": os.Getenv("APPLICATION_NAME"),
       		"application_description": os.Getenv("APPLICATION_DESCRIPTION"),
       		"application_language": os.Getenv("APPLICATION_LANGUAGE"),
